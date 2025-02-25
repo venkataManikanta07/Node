@@ -1,4 +1,9 @@
 import EventEmitter from "events";
+// Event Emitter is a class in node js that helps us to create our own custom events and handle them synchronously or asynchronously.
+// It is a class that is used to bind events and listeners in Node JS.
+// It is defined and exposed by the events module.
+// It is an instance of EventEmitter class.
+// It is used to produce and listen for events.
 
 // Creating instance
 const customEmitter = new EventEmitter();

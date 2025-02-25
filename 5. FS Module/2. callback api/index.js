@@ -9,7 +9,7 @@ fs.mkdir("D:\\Node\\TestFolder_From_VSCode2", (error) => {
     }
 })
 
-// In here we don't need to use try catch block, because we are using callback api.
-// The callback api is the old way of doing things.
+// In here we don't need to use try catch block, because we are using (callback) api.
+// The callback api is the old way of doing things in this.
 // We use the function and pass the error as the first argument, and the data as the second argument.
 // This is the way of handling the errors in the callback api.

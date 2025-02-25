@@ -1,5 +1,5 @@
  // MODULE WRAPPER 
- /*What ever the code we write, that will be wrapped by the iffy function. 
+ /*What ever the code we write, that will be wrapped by the iife function. 
  IMMIDEATELY INVOKE FUNCTION EXPRESSION. 
  */
 (function(exports, require, module, __filename, __dirname){

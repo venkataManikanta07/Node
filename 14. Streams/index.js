@@ -23,3 +23,6 @@ const stream = createReadStream('./data.txt', {encoding: "utf-8"});
 stream.on('data', (data)=> {
     console.log(data);
 })
+
+// on method is used to listen to the events
+// data is the event which is emitted when the data is read from the file

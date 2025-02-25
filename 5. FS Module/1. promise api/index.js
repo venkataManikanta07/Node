@@ -1,18 +1,18 @@
 import * as fs from "fs/promises";
-
+// we mostly use try catch block with await keyword. 
 //creating diretory / folder
 
-// try{
-//     await fs.mkdir("D:\\Node\\TestFolder_From_VSCode");
-//     // await fs.mkdir("D:\\Node\\TestFolder 2 \\ internalFolder", {recursive: true});
-//     // this recursive parameter will create the folders recursively if the parent folder is not present without throwing an error
-//     console.log("Folder created successfully");
+try{
+    await fs.mkdir("D:\\Node\\TestFolder_From_VSCode");
+    // await fs.mkdir("D:\\Node\\TestFolder 2 \\ internalFolder", {recursive: true});
+    // this recursive parameter will create the folders recursively if the parent folder is not present without throwing an error
+    console.log("Folder created successfully");
 
-// } catch (error) {
-//     console.error(error);
-// }
+} catch (error) {
+    console.error(error);
+}
 
-// Read the content
+// Read the files in directory
 // try {
 //   const files = await fs.readdir("D:\\Node");
 //   for (const file of files) {
