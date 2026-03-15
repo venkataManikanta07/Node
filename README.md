@@ -45,3 +45,12 @@ SINGLE THREAD
     . start the event loop 
         - The enent loop will start only it has some heavy data operations to do. 
         - The event loop will start up the thread pool then it will have multiple threads and each will do up a specific task. 
+
+
+
+# WHAT ARE HTTP HEADERS? 
+- so each request has data and headers 
+- The extra information is called headers. 
+
+HEADERS - represent the meta data associated with API request and response. 
+- There are built in headers like content-type and so on. 
