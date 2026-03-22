@@ -1,0 +1,6 @@
+Suppose we have a route like this 
+
+const router = express.Router();
+
+router.route("/").get(handleGetAllUsers).post(handleCreateNewUsers); 
+- so if the route comes to / and it's a get request it will call handleGetAllUsers and if it's a post request it will call handleCreateNewUsers
