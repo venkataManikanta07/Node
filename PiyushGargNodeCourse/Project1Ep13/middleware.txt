@@ -1,1 +1,1 @@
-This is the middleware file created at Sat Mar 14 2026 15:15:59 GMT+0530 (India Standard Time) and route is /users
+This is the middleware file created at Sun Mar 22 2026 15:33:00 GMT+0530 (India Standard Time) and route is /favicon.ico
