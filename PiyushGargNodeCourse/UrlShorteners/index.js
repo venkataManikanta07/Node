@@ -5,6 +5,7 @@ const urlRoute = require("./routes/url");
 const { connectToDb } = require("./connect");
 const { connect } = require("mongoose");
 const URL = require("./models/url");
+const path = require("path");
 
 connectToDb("mongodb://localhost:27017/short-url")
   .then(() => {
@@ -14,9 +15,14 @@ connectToDb("mongodb://localhost:27017/short-url")
     console.log("Error connecting to DB", err);
   });
 
+app.set("view engine", "ejs");
+app.set("views", path.resolve("./views")); // Set the views directory
 app.use(express.json()); // Middleware to parse JSON bodies
 
 app.use("/url", urlRoute);
+app.get("/test", (req, res) => {
+  res.render("home");
+});
 app.get("/:shortId", async (req, res) => {
   const shortID = req.params.shortId;
   const entry = await URL.findOneAndUpdate(
@@ -31,7 +37,7 @@ app.get("/:shortId", async (req, res) => {
       },
     },
   );
-  res.redirect(entry.redirectUrl);
+  res.redirect(entry.URL);
 });
 
 app.listen(port, () => {
