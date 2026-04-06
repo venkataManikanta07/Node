@@ -29,13 +29,6 @@ app.get("/posts", authenticateToken, (req, res) => {
   res.json(posts.filter((post) => post.username === req.user.name)); // we will only return the posts that belong to the user that is making the request
 });
 
-app.post("/login", (req, res) => {
-  // Authenticate the user first
-  const userName = req.body.username; // we need to AUTHENTICATE and SERIALIZE the user before we can generate a token for them
-  const user = { name: userName }; // this is the user object that we will be signing with
-  const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
-  return res.json({ accessToken: accessToken }); // The access token will have the user information saved inside of it.
-});
 
 function authenticateToken(req, res, next) {
   const authHeader = req.headers["authorization"]; // the token will be sent in the authorization header of the request
