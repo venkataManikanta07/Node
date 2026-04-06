@@ -7,6 +7,9 @@ const { connect } = require("mongoose");
 const URL = require("./models/url");
 const path = require("path");
 
+const userRoutes = require("./routes/user");
+app.use("/user", userRoutes);
+
 connectToDb("mongodb://localhost:27017/short-url")
   .then(() => {
     console.log("Connected to DB");
